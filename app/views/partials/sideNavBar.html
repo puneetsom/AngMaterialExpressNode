@@ -1,0 +1,73 @@
+<div ng-controller="SideNavBarCtrl">
+<md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2"
+	md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+<md-toolbar class="md-tall md-hue-2"> <span flex></span>
+<div layout="column" class="md-toolbar-tools-bottom inset">
+	<user-avatar></user-avatar>
+	<span></span>
+	<div>Firstname Lastname</div>
+	<div>email@domainname.com</div>
+</div>
+</md-toolbar> <md-list> <md-item ng-repeat="item in menu"> <a>
+	<md-item-content md-ink-ripple layout="row" ng-click="clickTest(item)"
+		layout-align="start center">
+	<div class="inset">
+		<ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+	</div>
+	<div class="inset">{{item.title}}</div>
+	</md-item-content>
+</a> </md-item> <md-divider></md-divider> <md-subheader>Management</md-subheader> <md-item
+	ng-repeat="item in admin"> <a> <md-item-content
+		md-ink-ripple layout="row" layout-align="start center">
+	<div class="inset">
+		<ng-md-icon icon="{{item.icon}}"></ng-md-icon>
+	</div>
+	<div class="inset">{{item.title}}</div>
+	</md-item-content>
+</a> </md-item> </md-list> </md-sidenav>
+
+</div>
+
+<!-- <nav class="navbar-default navbar-static-side" role="navigation" -->
+<!-- 	ng-controller="SideNavBarCtrl"> -->
+<!-- 	<div id="nav-main" class="sidebar-collapse"> -->
+<!-- 		<ul class="nav " id="side-menu"> -->
+<!-- 			<li ng-repeat="menuItem in menu"><a -->
+<!-- 				ng-if="menuItem.abstract==true" -->
+<!-- 				ng-class="{active: $state.includes(menuItem.state)}" -->
+<!-- 				ng-click="toggleMenu(menuItem,menuItem.collapse,$event)"> <i -->
+<!-- 					class="{{iconClassMapping[menuItem.icon]}}"> -->
+<!-- 					</i>&nbsp;&nbsp;<span -->
+<!-- 					class="menuName"> {{menuItem.name}}</span> <i class="pull-right" -->
+<!-- 					ng-class="!menuItem.collapse?'fa fa-chevron-up':'fa fa-chevron-down'"></i></a> -->
+<!-- 				<a class="collapsediv" ng-if="menuItem.abstract!=true" -->
+<!-- 				ui-sref="{{menuItem.state}}" -->
+<!-- 				ng-class="{active: $state.includes(menuItem.state)}"> <i -->
+<!-- 					class="{{iconClassMapping[menuItem.icon]}}"></i>&nbsp;&nbsp;<span -->
+<!-- 					class="menuName">{{menuItem.name}}</span> -->
+<!-- 			</a> /.nav-second-level -->
+<!-- 				<ul class="nav nav-second-level" ng-if="menuItem.childLinks" -->
+<!-- 					class="sideNavbar" ng-hide="menuItem.collapse"> -->
+<!-- 					<li ng-repeat="childMenuItem in menuItem.childLinks"><a -->
+<!-- 						class="collapsediv" ui-sref="{{childMenuItem.state}}" -->
+<!-- 						ng-class="{activeSubMenu: $state.includes(childMenuItem.state)}"><i -->
+<!-- 							class="{{iconClassMapping[childMenuItem.icon]}}"></i>&nbsp;<span -->
+<!-- 							class="menuName"> {{childMenuItem.name}}</span></span></a></li> -->
+
+<!-- 				</ul> -->
+<!--             </li> -->
+
+
+<!--             <li><a id="smallSidenav" style="padding: 5px 16px 21px 16px;"><i style="font-size:14px;" -->
+<!--                     class="pull-right glyphicon glyphicon-circle-arrow-left"></i></a></li> -->
+<!--             <li><a id="largeSidenav" style="padding: 5px 16px 21px 16px;"><i style="font-size:14px;" -->
+<!--                     class="pull-left glyphicon glyphicon-circle-arrow-right"></i></a></li> -->
+
+<!-- 		</ul> -->
+<!-- 		<!-- /#side-menu -->
+<!-- 	</div> -->
+<!-- 	<!-- /.sidebar-collapse -->
+
+<!-- </nav> -->
+<!-- <!-- /.navbar-static-side -->
+

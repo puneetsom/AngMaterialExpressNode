@@ -1,0 +1,121 @@
+<!doctype html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<base href="/">
+<title>Media App</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!-- build:css(app) styles/vendor.css -->
+<!-- bower:css -->
+<!-- <link rel="stylesheet" -->
+<!-- 	href="bower_components/bootstrap/dist/css/bootstrap.css" /> -->
+<!-- endbower -->
+<!-- endbuild -->
+<!-- build:css({.tmp,app}) styles/main.css -->
+<!-- <link rel="stylesheet" -->
+<!-- 	href="bower_components/font-awesome/css/font-awesome.css" /> -->
+
+<link rel="stylesheet"
+	href="//ajax.googleapis.com/ajax/libs/angular_material/0.8.3/angular-material.min.css">
+<!-- <link rel="stylesheet" -->
+<!-- 	href="./bower_components/angular-material/angular-material.min.css"> -->
+<link rel="stylesheet" href="styles/main.css">
+<!-- <link rel="stylesheet" href="styles/datetimepicker.css" /> -->
+<!-- <link rel="stylesheet" -->
+<!-- 	href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css" /> -->
+<!-- endbuild -->
+</head>
+<body ng-app="angularTestApp">
+
+	<!-- Angular Material Dependencies -->
+	<script src="./bower_components/angular/angular.js"></script>
+	<script src="./bower_components/angular-animate/angular-animate.js"></script>
+	<script src="./bower_components/angular-aria/angular-aria.js"></script>
+	<script src="./bower_components/angular-material/angular-material.js"></script>
+	<script src="./bower_components/jquery/jquery.js"></script>
+	<script
+		src="//cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+	<!-- Angular Material Dependencies -->
+
+
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+	<!-- 	<div class="row-fluid align-center" id="spinner" loader> -->
+	<!-- 		<img src="/images/image_load.gif" height="25px" /> -->
+	<!-- 	</div> -->
+	<!-- Add your site or application content here -->
+
+	<!-- 	<div id="wrapper"> -->
+	<!-- 		<div ng-include="'partials/navbar'"></div> -->
+	<!-- 		<div ng-include="'partials/sideNavBar'"></div> -->
+	<!-- 		<div id="page-wrapper"> -->
+	<!-- 			<div ui-view></div> -->
+	<!-- 		</div> -->
+	<!-- 	</div> -->
+
+	<div ng-include="'partials/navbar'"></div>
+
+	<div layout="column" class="relative" layout-fill role="main">
+<!-- 		<md-content flex md-scroll-y>  -->
+		<ui-view layout="column"
+			layout-fill layout-padding>
+<!-- 		<div class="inset" hide-sm></div> -->
+		 </ui-view> 
+<!-- 		 </md-content> -->
+	</div>
+
+
+	<!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+	<!-- build:js(app) scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="bower_components/jquery/jquery.js"></script>
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	<script
+		src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+	<script src="bower_components/moment/moment.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+
+
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="scripts/sugar.min.js"></script>
+	<script src="scripts/jquery.metisMenu.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/routes.js"></script>
+	<script src="scripts/factory/iconClassMapping.js"></script>
+	<script src="scripts/factory/appUtils.js"></script>
+	<script src="scripts/factory/spinner.js"></script>
+	<script src="scripts/directives/uiBreadcrumbs-directive.js"></script>
+	<script src="scripts/controllers/main.js"></script>
+	<script src="scripts/controllers/navbar.js"></script>
+	<script src="scripts/controllers/sideNavBar.js"></script>
+	<script src="scripts/controllers/breadcrumb.js"></script>
+
+	<script
+		src="scripts/modules/manageUsers/controllers/userProfileClient.js"></script>
+
+	<script src="scripts/modules/testLink/controllers/testLink.js"></script>
+
+	<!-- endbuild -->
+
+
+
+</body>
+</html>

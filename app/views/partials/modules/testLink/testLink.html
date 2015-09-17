@@ -1,0 +1,69 @@
+<div ng-controller="testLink">
+	<md-card flex-gt-sm="90" flex-gt-md="80"> <md-card-content>
+	<h2>Activity</h2>
+	<md-list> <md-item
+		ng-repeat="item in activity | filter:search"> <md-item-content>
+	<div class="md-tile-left inset" hide-sm>
+		<user-avatar></user-avatar>
+	</div>
+	<div class="md-tile-content">
+		<h3>{{item.what}}</h3>
+		<h4>{{item.who}}</h4>
+		<p>{{item.notes}}</p>
+	</div>
+	</md-item-content> <md-divider md-inset hide-sm ng-if="!$last"></md-divider> <md-divider
+		hide-gt-sm ng-if="!$last"></md-divider> </md-item> <md-divider></md-divider> <md-item
+		layout class="inset"> <md-button layout
+		layout-align="start center" flex class="md-primary"> <svg
+		xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+		viewBox="0 0 24 24">
+				<path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" /></svg>
+	More </md-button> </md-item> </md-list> </md-card-content> </md-card>
+</div>
+
+<!-- <div ui-view ng-controller="testLink" data-ng-init="load()">
+	<br>
+	<div class="book-container">
+		<div class="book-header">{{ testData.name }}</div>
+		<div class="book-body">
+						<div class="col-md-12">
+							<div ng-repeat="ques in testData.questions" class="col-md-12">
+								<label 	style="color: #438EA8; padding-bottom: 15px; font-size: 19px; font-weight: 500;">{{
+									$index+1 }}. {{ques.question}}</label>
+								<div style="background-color: white; -o-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); -ms-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); margin-bottom: 60px; border-radius: 10px;">
+									<div class="col-md-6" ng-repeat="ans in ques.options">
+										<input type="radio" name="option" ng-model="userSelection.ans"
+											ng-value="{{ $index }}" id="{{ $index }}"> <label
+											for="{{ $index }}">{{ ans }}</label>
+									</div>
+								</div>
+							</div>
+						</div>
+			<div class="col-md-12">
+				<div class="col-md-12"
+					style="color: #438EA8; padding-bottom: 15px; font-size: 19px; font-weight: 500;">
+					<h3>{{count}}.) &nbsp;
+						{{testData.questions[count-1].question}}</h3>
+				</div>
+				<div ng-repeat="option in testData.questions[count-1].options"
+					class="col-md-6" class="repeat-wrap">
+					<div class="input-group input-radio">
+						<input type="radio" name="option"
+							ng-model="userSelection[count-1]" ng-value="{{ $index }}"
+							id="{{ $index }}"> <label for="{{ $index }}"
+							class="radio-label">{{ option }}</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="book-footer">
+			<button ng-if="count!=testData.questions.length"
+				ng-click="onNext(testData.questions[count-1])"
+				class="btn btn-success pull-right">Next &nbsp;</button>
+			&nbsp;
+			<button ng-if="count==testData.questions.length"
+				class="btn btn-primary pull-right" ng-click="onSubmit(testData.questions[count-1])">Submit</button>
+		</div>
+	</div>
+
+</div> -->
